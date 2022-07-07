@@ -397,14 +397,14 @@ a {
   justify-content: space-around;
 }
 .skills-showcase__list-item {
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 5px;
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .skills-showcase__list-item i {
   color: rgb(190, 190, 190);
-  font-size: 7rem;
+  font-size: 5rem;
 }
 
 @media (max-width: 75em) {
