@@ -524,6 +524,7 @@ a {
 
 .projects__list-item-img {
   width: 100%;
+  display: block;
 }
 
 .projects__list-item-heading-tertiary {
