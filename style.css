@@ -362,12 +362,6 @@ a {
   margin-bottom: 4rem;
 }
 
-@media (max-width: 37.5em) {
-  .about__text-primary {
-    /* margin-bottom: 3.5rem; */
-  }
-}
-
 .about__info-heading {
   margin-bottom: 3rem;
   color: #555;
