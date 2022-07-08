@@ -229,6 +229,33 @@ a {
   background: rgba(29, 161, 242, 1);
 }
 
+.main-header__sm-scr-nav-btn {
+  /* background: red; */
+  padding: 1rem 1rem;
+}
+
+.main-header__sm-scr-nav-btn-line {
+  height: 2px;
+  background: #444;
+  width: 3rem;
+  border-radius: 50px;
+}
+
+/* .main-header__sm-scr-nav-btn-line:first-child { 
+  transform: rotateZ(45deg);
+
+}
+
+.main-header__sm-scr-nav-btn-line:last-child { 
+  transform: rotateZ(-45deg);
+
+} */
+
+
+.main-header__sm-scr-nav-btn-line:first-child {
+margin-bottom: 8px;
+}
+
 @media (max-width: 37.5em) {
   .main-header {
     padding: 2.3rem 1.5rem;
