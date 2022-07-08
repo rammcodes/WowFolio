@@ -236,7 +236,7 @@ a {
 
 .main-header__sm-scr-nav-btn-line {
   height: 1px;
-  background: #444;
+  background: #000;
   width: 3rem;
   border-radius: 50px;
 }
