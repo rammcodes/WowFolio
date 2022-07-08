@@ -404,6 +404,7 @@ a {
 }
 .skills-showcase__list-item i {
   color: rgba(29, 161, 242, 1);
+  color: #999;
   font-size: 5rem;
 }
 
