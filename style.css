@@ -230,8 +230,15 @@ a {
 }
 
 .main-header__sm-scr-nav-btn {
-  /* background: red; */
   padding: 1rem 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 37.5em) {
+  .main-header__sm-scr-nav-btn {
+    display: block;
+  }
 }
 
 .main-header__sm-scr-nav-btn-line {
@@ -241,19 +248,54 @@ a {
   border-radius: 50px;
 }
 
-/* .main-header__sm-scr-nav-btn-line:first-child { 
-  transform: rotateZ(45deg);
-
+.main-header__sm-menu {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 40rem;
+  transform: translateX(-100%);
+  transition: transform .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.main-header__sm-scr-nav-btn-line:last-child { 
-  transform: rotateZ(-45deg);
+.main-header__sm-menu--active {
+  transform: translateX(0);
+}
 
-} */
+.main-header__sm-menu-links {
+  width: 90%;
+}
 
+.main-header__sm-menu-link {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.main-header__sm-menu-link a {
+  font-size: 2.5rem;
+  text-align: center;
+  display: block;
+  padding: 3rem;
+  color: #555;
+}
+
+@keyframes smMenuLinkStartAnimation {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 .main-header__sm-scr-nav-btn-line:first-child {
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 37.5em) {
@@ -262,8 +304,6 @@ margin-bottom: 8px;
   }
   .main-header__logo-img-cont {
     margin-right: 1rem;
-    /* width: 3.5rem;
-    height: 3.5rem; */
   }
 }
 
