@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* 75em === 1200px */
@@ -274,8 +275,7 @@ a {
 .main-header__sm-menu-link {
   opacity: 0;
   transform: translateY(50px);
-}
-.main-header__sm-menu-link a {
+  transition: opacity .3s, transform .3s;
   font-size: 2.5rem;
   text-align: center;
   display: block;
@@ -283,7 +283,7 @@ a {
   color: #555;
 }
 
-@keyframes smMenuLinkStartAnimation {
+/* @keyframes smMenuLinkStartAnimation {
   0% {
     transform: translateY(50px);
     opacity: 0;
@@ -293,6 +293,17 @@ a {
     opacity: 1;
   }
 }
+
+@keyframes smMenuLinkEndAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+} */
 
 .main-header__sm-scr-nav-btn-line:first-child {
   margin-bottom: 8px;
