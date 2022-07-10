@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --themeColor: 29, 161, 242; /* Theme Color in (R,G,B) format */
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -62,7 +66,7 @@ a {
   padding: 1.8rem 4rem;
   font-size: 1.8rem;
   border-radius: 5px;
-  border: 2px solid rgba(29, 161, 242, 1);
+  border: 2px solid rgba(var(--themeColor), 1);
 }
 
 @media (max-width: 37.5em) {
@@ -72,13 +76,13 @@ a {
 }
 
 .btn-theme {
-  background: rgba(29, 161, 242, 1);
+  background: rgba(var(--themeColor), 1);
   color: #fff;
   box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
 }
 
 .btn-inv {
-  color: rgba(29, 161, 242, 1);
+  color: rgba(var(--themeColor), 1);
   background: #fff;
 }
 
@@ -227,7 +231,7 @@ a {
   height: 4rem;
   overflow: hidden;
   border-radius: 10rem;
-  background: rgba(29, 161, 242, 1);
+  background: rgba(var(--themeColor), 1);
 }
 
 .main-header__sm-scr-nav-btn {
@@ -258,7 +262,7 @@ a {
   height: 100%;
   min-height: 40rem;
   transform: translateX(-100%);
-  transition: transform .5s;
+  transition: transform 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,7 +279,7 @@ a {
 .main-header__sm-menu-link {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity .3s, transform .3s;
+  transition: opacity 0.3s, transform 0.3s;
   font-size: 2.5rem;
   text-align: center;
   display: block;
@@ -481,7 +485,7 @@ a {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .skills-showcase__list-item i {
-  color: rgba(29, 161, 242, 1);
+  color: rgba(var(--themeColor), 1);
   color: #999;
   font-size: 5rem;
 }
@@ -618,7 +622,7 @@ a {
 .projects__title-text-divider {
   height: 5px;
   width: 3rem;
-  background: rgba(29, 161, 242, 1);
+  background: rgba(var(--themeColor), 1);
   margin-bottom: 3rem;
   border-radius: 100px;
 }
@@ -721,7 +725,7 @@ a {
   letter-spacing: 1px;
   font-family: inherit;
   font-weight: 700;
-  background: rgba(29, 161, 242, 1);
+  background: rgba(var(--themeColor), 1);
   color: #fff;
   margin-top: 4rem;
   display: block;
@@ -746,7 +750,7 @@ a {
   content: '';
   position: absolute;
   z-index: 20;
-  background: rgba(29, 161, 242, 0.5);
+  background: rgba(var(--themeColor), 0.5);
   width: 100%;
   height: 100%;
   top: 0;
