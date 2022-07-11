@@ -268,6 +268,31 @@ a {
   justify-content: center;
 }
 
+.main-header__sm-menu-close {
+  position: absolute; 
+  top: 3.3rem;
+  right: 2.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.main-header__sm-menu-close:before,
+.main-header__sm-menu-close:after {
+  position: absolute;
+  content: ' ';
+  height: 3rem;
+  width: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+}
+.main-header__sm-menu-close:before {
+  transform: rotate(45deg);
+}
+.main-header__sm-menu-close:after {
+  transform: rotate(-45deg);
+}
+
 .main-header__sm-menu--active {
   transform: translateX(0);
 }
