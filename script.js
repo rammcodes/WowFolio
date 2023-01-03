@@ -51,7 +51,6 @@ smMenuLinks.forEach((ele) => {
     smMenu.classList.remove('main-header__sm-menu--active')
 
     setTimeout(() => {
-      console.log('eelelle', ele.name)
       document.getElementById(ele.name).scrollIntoView()
     }, 1300)
   })
