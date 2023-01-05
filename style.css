@@ -229,6 +229,7 @@ a {
 .main-header__logo-container {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .main-header__logo-img-cont {

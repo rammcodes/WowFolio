@@ -132,3 +132,10 @@ themeColorSelectorInput.addEventListener('input', (e) => {
 //   themeColorSelectorInput.value = userSelectedColor
 //   setDynamicColor(userSelectedColor)
 // }
+
+// ---
+const headerLogoConatiner = document.querySelector('.main-header__logo-container')
+
+headerLogoConatiner.addEventListener('click', () => {
+  location.href = 'index.html'
+})
