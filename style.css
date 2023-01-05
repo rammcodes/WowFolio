@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 :root {
@@ -763,6 +764,54 @@ a {
   font-size: 1.6rem;
   resize: none;
   border-radius: 5px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Code for Modern Browsers */
+/* Code for WebKit, Blink, Edge */
+/* Code for Internet Explorer 10-11 */
+/* Code for Microsoft Edge */
+/* Code for Mozilla Firefox 4 to 18 */
+/* Code for Mozilla Firefox 19+ */
+
+
+.contact__form-field-input::placeholder {
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contact__form-field-input::-webkit-input-placeholder {
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contact__form-field-input:-ms-input-placeholder {
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contact__form-field-input::-ms-input-placeholder {
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contact__form-field-input:-moz-placeholder {
+  opacity: 1;
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contact__form-field-input::-moz-placeholder {
+  opacity: 1;
+  color: rgb(175, 175, 175);
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 .contact__form-field-input:focus {
@@ -782,6 +831,7 @@ a {
   margin-top: 4rem;
   display: block;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .contact__form-visual {
