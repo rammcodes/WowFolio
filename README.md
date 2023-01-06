@@ -7,11 +7,9 @@
 </div>
 
 <br/>
-<br/>
 
 ---
 
-<br/>
 <br/>
 
 ## Test the template with different colours using the colour picker 🎨
@@ -36,11 +34,9 @@ colours and see which colour fits your needs so you can use that colour for your
 }
 ```
 <br/>
-<br/>
 
 ---
 
-<br/>
 <br/>
 
 ## Technologies used 🛠️
