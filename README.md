@@ -43,14 +43,8 @@ colours and see which colour fits your needs so you can use that colour for your
 <br/>
 <br/>
 
-----
-
-<br/>
-
 ## Technologies used 🛠️
 
 - **HTML** 💀
 - **CSS** 🌈
 - **JavaScript** 🧠
-
----
