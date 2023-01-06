@@ -1,8 +1,6 @@
-# Wowfolio 🦄 
+# Wowfolio 🦄 - A Simple & Clean Portfolio Template For Developers 👨‍💻
 
-## A Simple & Clean Portfolio Template For Developers 👨‍💻
-
-## [Demo Link](https://wowfolio.netlify.app)
+**[Demo Link](https://wowfolio.netlify.app)**
 
 <div align="center">
   <img src="https://i.postimg.cc/wMhtzfw7/ezgif-com-gif-maker-1.gif" alt="Wowfolio Demo" width="100%" />
@@ -18,8 +16,6 @@
 <br/>
 
 ## Test the template with different colours using the colour picker 🎨
-
-<br/>
 
 This is very helpful for you as you can test the template with different
 colours and see which colour fits your needs so you can use that colour for your own website.
