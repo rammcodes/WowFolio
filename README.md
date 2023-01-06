@@ -35,3 +35,22 @@ colours and see which colour fits your needs so you can use that colour for your
   --themeColor: 29, 161, 242; /* Theme Color in (R,G,B) format */
 }
 ```
+<br/>
+<br/>
+
+---
+
+<br/>
+<br/>
+
+----
+
+<br/>
+
+## Technologies used 🛠️
+
+- **HTML** 💀
+- **CSS** 🌈
+- **JavaScript** 🧠
+
+---
