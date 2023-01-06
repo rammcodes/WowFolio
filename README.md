@@ -44,3 +44,25 @@ colours and see which colour fits your needs so you can use that colour for your
 - **HTML** 💀
 - **CSS** 🌈
 - **JavaScript** 🧠
+
+<br/>
+
+---
+
+<br/>
+
+## Drop a Star ⭐
+
+If you like this project then drop a **Github** star by pressing the **Star** button ⭐
+
+<br>
+
+---
+
+<br>
+
+## Author 👨‍💻
+
+- **Ram Maheshwari** - **[Linkedin](https://linkedin.com/in/rammcodes)**, **[Youtube](https://youtube.com/@rammcodes)**, **[Github](https://github.com/rammcodes)**, **[Portfolio](https://rammaheshwari.com)**  
+
+<br>
