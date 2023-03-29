@@ -502,7 +502,10 @@ a {
   border-radius: 5px;
   font-weight: 500;
 }
-
+.about__skill:hover{
+  transition: transform .3s;
+  transform: scale(1.05);
+}
 /* Skills Showcase */
 
 .skills-showcase {
@@ -521,13 +524,14 @@ a {
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
 .skills-showcase__list-item i {
-  color: rgba(var(--themeColor), 1);
-  color: #999;
+  color: rgba(var(--themeColor), .5);
   font-size: 5rem;
 }
-
+.skills-showcase__list-item:hover > i{
+  transition: all .3s;
+  color: rgba(var(--themeColor), 1);
+}
 @media (max-width: 75em) {
   .skills-showcase__list-item {
     padding: 1.5rem;
