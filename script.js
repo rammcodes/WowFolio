@@ -105,9 +105,9 @@ function hexToRgb(hex) {
 }
 
 /**
- * Triggers a click event on the color input when selector is clicked
+ * Opens the color picker when the color selector is clicked
  */
-function triggerColorInput() {
+function openColorPicker() {
   if (themeColorSelectorInput) {
     themeColorSelectorInput.click();
   }
@@ -127,7 +127,7 @@ function setDynamicColor(color) {
 
 // Event listeners for theme color selector
 if (themeColorSelector) {
-  themeColorSelector.addEventListener('click', triggerColorInput);
+  themeColorSelector.addEventListener('click', openColorPicker);
 }
 
 if (themeColorSelectorInput) {
