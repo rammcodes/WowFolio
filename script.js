@@ -1,141 +1,146 @@
-const smMenuBtn = document.querySelector('.main-header__sm-scr-nav-btn')
-const smMenu = document.querySelector('.main-header__sm-menu')
-const smMenuCloseBtn = document.querySelector('.main-header__sm-menu-close')
+// Mobile menu elements
+const smMenuBtn = document.querySelector('.main-header__sm-scr-nav-btn');
+const smMenu = document.querySelector('.main-header__sm-menu');
+const smMenuCloseBtn = document.querySelector('.main-header__sm-menu-close');
+const smMenuLinks = document.querySelectorAll('.main-header__sm-menu-link');
 
-const smMenuLinks = document.querySelectorAll('.main-header__sm-menu-link')
-const smMenuLink1 = document.querySelector('.main-header__sm-menu-link--1')
-const smMenuLink2 = document.querySelector('.main-header__sm-menu-link--2')
-const smMenuLink3 = document.querySelector('.main-header__sm-menu-link--3')
-const smMenuLink4 = document.querySelector('.main-header__sm-menu-link--4')
+/**
+ * Animates menu links with staggered transitions
+ * @param {NodeListOf<Element>} links - Menu link elements
+ * @param {boolean} show - Whether to show (true) or hide (false) the links
+ */
+function animateMenuLinks(links, show) {
+  const delays = [0.5, 0.8, 1.1, 1.4];
+  const translateY = show ? '0' : '50px';
+  const opacity = show ? '1' : '0';
+  
+  links.forEach((link, index) => {
+    const delay = show ? delays[index] : delays[delays.length - 1 - index] - 0.5;
+    link.style.transitionDelay = `${delay}s`;
+    link.style.transform = `translateY(${translateY})`;
+    link.style.opacity = opacity;
+  });
+}
 
-smMenuBtn.addEventListener('click', () => {
-  smMenu.style.transitionDelay = '0s'
-  smMenu.classList.add('main-header__sm-menu--active')
+/**
+ * Opens the mobile menu
+ */
+function openMobileMenu() {
+  if (!smMenu || !smMenuLinks) return;
+  
+  smMenu.style.transitionDelay = '0s';
+  smMenu.classList.add('main-header__sm-menu--active');
+  animateMenuLinks(smMenuLinks, true);
+  
+  // Update ARIA attribute
+  if (smMenuBtn) {
+    smMenuBtn.setAttribute('aria-expanded', 'true');
+  }
+}
 
-  smMenuLink1.style.transitionDelay = '.5s'
-  smMenuLink1.style.transform = 'translateY(0)'
-  smMenuLink1.style.opacity = '1'
-
-  smMenuLink2.style.transitionDelay = '.8s'
-  smMenuLink2.style.transform = 'translateY(0)'
-  smMenuLink2.style.opacity = '1'
-
-  smMenuLink3.style.transitionDelay = '1.1s'
-  smMenuLink3.style.transform = 'translateY(0)'
-  smMenuLink3.style.opacity = '1'
-
-  smMenuLink4.style.transitionDelay = '1.4s'
-  smMenuLink4.style.transform = 'translateY(0)'
-  smMenuLink4.style.opacity = '1'
-})
-
-smMenuLinks.forEach((ele) => {
-  ele.addEventListener('click', () => {
-    smMenuLink4.style.transitionDelay = '0s'
-    smMenuLink4.style.transform = 'translateY(50px)'
-    smMenuLink4.style.opacity = '0'
-
-    smMenuLink3.style.transitionDelay = '.3s'
-    smMenuLink3.style.transform = 'translateY(50px)'
-    smMenuLink3.style.opacity = '0'
-
-    smMenuLink2.style.transitionDelay = '.6s'
-    smMenuLink2.style.transform = 'translateY(50px)'
-    smMenuLink2.style.opacity = '0'
-
-    smMenuLink1.style.transitionDelay = '.9s'
-    smMenuLink1.style.transform = 'translateY(50px)'
-    smMenuLink1.style.opacity = '0'
-
-    smMenu.style.transitionDelay = '1.2s'
-    smMenu.classList.remove('main-header__sm-menu--active')
-
+/**
+ * Closes the mobile menu
+ * @param {Element|null} targetSection - Optional section to scroll to after closing
+ */
+function closeMobileMenu(targetSection = null) {
+  if (!smMenu || !smMenuLinks) return;
+  
+  animateMenuLinks(smMenuLinks, false);
+  smMenu.style.transitionDelay = '1.2s';
+  smMenu.classList.remove('main-header__sm-menu--active');
+  
+  // Update ARIA attribute
+  if (smMenuBtn) {
+    smMenuBtn.setAttribute('aria-expanded', 'false');
+  }
+  
+  if (targetSection) {
     setTimeout(() => {
-      document.getElementById(ele.name).scrollIntoView()
-    }, 1300)
-  })
-})
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, 1300);
+  }
+}
 
-smMenuCloseBtn.addEventListener('click', () => {
-  smMenuLink4.style.transitionDelay = '0s'
-  smMenuLink4.style.transform = 'translateY(50px)'
-  smMenuLink4.style.opacity = '0'
+// Event listeners for mobile menu
+if (smMenuBtn) {
+  smMenuBtn.addEventListener('click', openMobileMenu);
+}
 
-  smMenuLink3.style.transitionDelay = '.3s'
-  smMenuLink3.style.transform = 'translateY(50px)'
-  smMenuLink3.style.opacity = '0'
+if (smMenuCloseBtn) {
+  smMenuCloseBtn.addEventListener('click', () => closeMobileMenu());
+}
 
-  smMenuLink2.style.transitionDelay = '.6s'
-  smMenuLink2.style.transform = 'translateY(50px)'
-  smMenuLink2.style.opacity = '0'
-
-  smMenuLink1.style.transitionDelay = '.9s'
-  smMenuLink1.style.transform = 'translateY(50px)'
-  smMenuLink1.style.opacity = '0'
-
-  smMenu.style.transitionDelay = '1.2s'
-  smMenu.classList.remove('main-header__sm-menu--active')
-})
+if (smMenuLinks) {
+  smMenuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const targetSection = document.getElementById(link.getAttribute('name'));
+      closeMobileMenu(targetSection);
+    });
+  });
+}
 
 
 
 
 
-// ---
-const themeColorSelector = document.querySelector('.themeClrSelector')
-const themeColorSelectorInput = document.querySelector(
-  '.themeClrSelector__input'
-)
+// Theme color selector elements
+const themeColorSelector = document.querySelector('.themeClrSelector');
+const themeColorSelectorInput = document.querySelector('.themeClrSelector__input');
 const root = document.documentElement;
 
-
-
-const hexToRgb = (hex) => {
-  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+/**
+ * Converts hex color to RGB object
+ * @param {string} hex - Hexadecimal color code
+ * @returns {Object|null} Object with r, g, b properties or null if invalid
+ */
+function hexToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
         g: parseInt(result[2], 16),
         b: parseInt(result[3], 16),
       }
-    : null
+    : null;
 }
 
-const eventFire = (el, etype) => {
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype)
-  } else {
-    let evObj = document.createEvent('Events')
-    evObj.initEvent(etype, true, false)
-    el.dispatchEvent(evObj)
+/**
+ * Triggers a click event on the color input when selector is clicked
+ */
+function triggerColorInput() {
+  if (themeColorSelectorInput) {
+    themeColorSelectorInput.click();
   }
 }
 
-themeColorSelector.addEventListener('click', () => {
-  eventFire(themeColorSelectorInput, 'input')
-})
-
-const setDynamicColor = (color) => {
-
-  const { r, g, b } = hexToRgb(`${color}`)
+/**
+ * Sets the dynamic theme color
+ * @param {string} color - Hexadecimal color code
+ */
+function setDynamicColor(color) {
+  const rgb = hexToRgb(color);
   
-  root.style.setProperty('--themeColor', `${r},${g},${b}`);
-  //localStorage.setItem('color', color)
+  if (rgb) {
+    root.style.setProperty('--themeColor', `${rgb.r},${rgb.g},${rgb.b}`);
+  }
 }
 
-themeColorSelectorInput.addEventListener('input', (e) => {
-  setDynamicColor(e.target.value)
-})
+// Event listeners for theme color selector
+if (themeColorSelector) {
+  themeColorSelector.addEventListener('click', triggerColorInput);
+}
 
-// if (localStorage.getItem('color')) {
-//   let userSelectedColor = localStorage.getItem('color')
-//   themeColorSelectorInput.value = userSelectedColor
-//   setDynamicColor(userSelectedColor)
-// }
+if (themeColorSelectorInput) {
+  themeColorSelectorInput.addEventListener('input', (e) => {
+    setDynamicColor(e.target.value);
+  });
+}
 
-// ---
-const headerLogoConatiner = document.querySelector('.main-header__logo-container')
+// Logo container navigation
+const headerLogoContainer = document.querySelector('.main-header__logo-container');
 
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
+if (headerLogoContainer) {
+  headerLogoContainer.addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
+}
