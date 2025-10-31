@@ -62,7 +62,6 @@ a {
   font-family: inherit;
   letter-spacing: 1px;
   font-weight: 700;
-  border: none;
   box-shadow: none;
   cursor: pointer;
   padding: 1.8rem 4rem;
@@ -242,6 +241,8 @@ a {
   padding: 1rem 1rem;
   display: none;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 @media (max-width: 37.5em) {
@@ -278,6 +279,11 @@ a {
   right: 2.5rem;
   width: 3rem;
   height: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #000;
 }
 
 .main-header__sm-menu-close:before,
