@@ -580,11 +580,10 @@ a {
 }
 
 .projects__list-item-count {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   max-height: 30rem;
-  display: none;
 }
 
 .projects__list-item-count-num {
@@ -594,7 +593,6 @@ a {
   height: 5rem;
   color: #fff;
   background: #000;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -620,7 +618,6 @@ a {
 }
 
 .projects__list-item-img-cont {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -742,38 +739,6 @@ a {
 }
 
 .contact__form-field-input::placeholder {
-  color: rgb(175, 175, 175);
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
-.contact__form-field-input::-webkit-input-placeholder {
-  color: rgb(175, 175, 175);
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
-.contact__form-field-input:-ms-input-placeholder {
-  color: rgb(175, 175, 175);
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
-.contact__form-field-input::-ms-input-placeholder {
-  color: rgb(175, 175, 175);
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
-.contact__form-field-input:-moz-placeholder {
-  opacity: 1;
-  color: rgb(175, 175, 175);
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
-.contact__form-field-input::-moz-placeholder {
-  opacity: 1;
   color: rgb(175, 175, 175);
   font-weight: 400;
   font-size: 1.6rem;

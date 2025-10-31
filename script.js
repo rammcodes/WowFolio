@@ -77,15 +77,9 @@ themeColorSelectorInput.addEventListener('input', (e) => {
   setDynamicColor(e.target.value)
 })
 
-// if (localStorage.getItem('color')) {
-//   let userSelectedColor = localStorage.getItem('color')
-//   themeColorSelectorInput.value = userSelectedColor
-//   setDynamicColor(userSelectedColor)
-// }
-
 // ---
-const headerLogoConatiner = document.querySelector('.main-header__logo-container')
+const headerLogoContainer = document.querySelector('.main-header__logo-container')
 
-headerLogoConatiner.addEventListener('click', () => {
+headerLogoContainer.addEventListener('click', () => {
   location.href = 'index.html'
 })
