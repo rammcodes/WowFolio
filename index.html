@@ -20,28 +20,28 @@
       <div class="main-header__logo-img-cont">
         <img
           src="https://d33wubrfki0l68.cloudfront.net/32c48e23e828c42a99a37db81e2a91d7c8eed4de/d134a/assets/png/ram-maheshwari.png"
-          alt="logo Image" class="main-header__logo-img" />
+          alt="John Anderson Profile" class="main-header__logo-img" />
       </div>
       <h4 class="main-header__logo-text">John Anderson</h4>
     </div>
-    <nav class="main-header__navigation">
+    <nav class="main-header__navigation" aria-label="Main navigation">
       <ul class="main-header__navigation-links">
         <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
         <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
         <li class="main-header__navigation-link">
           <a href="./index.html#projects"> Projects </a>
         </li>
-        <li class="main-header__navigation-link"><a href="./index.html#contact" href=""> Contact </a></li>
+        <li class="main-header__navigation-link"><a href="./index.html#contact"> Contact </a></li>
       </ul>
     </nav>
-    <div class="main-header__sm-scr-nav-btn">
+    <button class="main-header__sm-scr-nav-btn" aria-label="Open mobile menu" aria-expanded="false">
       <div class="main-header__sm-scr-nav-btn-line"></div>
       <div class="main-header__sm-scr-nav-btn-line"></div>
-    </div>
-    <div class="main-header__sm-menu">
-      <div class="main-header__sm-menu-close">
-
-      </div>
+    </button>
+    <div class="main-header__sm-menu" role="dialog" aria-label="Mobile navigation menu">
+      <button class="main-header__sm-menu-close" aria-label="Close mobile menu">
+        ✕
+      </button>
       <ul class="main-header__sm-menu-links">
         <li>
           <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
@@ -89,6 +89,7 @@
         <span class="heading-secondary__sm"> About 🦄</span>
         <span class="heading-secondary__main">
           Here you will find more information about me, what I do, and list of my current skills in programming
+        </span>
       </h2>
       <div class="main-section__content">
         <div class="about__info">
@@ -134,13 +135,6 @@
               <li class="about__skill">git</li>
               <li class="about__skill">vscode</li>
               <li class="about__skill">linux</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
             </ul>
           </div>
         </div>
@@ -197,7 +191,7 @@
             </div>
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/mock.png" alt="Project screenshot" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -227,7 +221,7 @@
           <div class="projects__list-item projects__list-item--inv">
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/mock.png" alt="Project screenshot" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -267,7 +261,7 @@
             </div>
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/mock.png" alt="Project screenshot" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -297,7 +291,7 @@
           <div class="projects__list-item projects__list-item--inv">
             <div class="projects__list-item-details">
               <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
+                <img src="./assets/mock.png" alt="Project screenshot" class="projects__list-item-img" />
               </div>
               <h3 class="heading-tertiary projects__list-item-heading-tertiary">
                 Project Name
@@ -346,16 +340,16 @@
           <form class="contact__form">
             <div class="contact__form-field">
               <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
+              <input id="name" name="name" placeholder="Enter Your Name" type="text" class="contact__form-field-input" required />
             </div>
             <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
+              <label for="email" class="contact__form-field-label">Email</label>
+              <input id="email" name="email" placeholder="Enter Your Email" type="email" class="contact__form-field-input" required />
             </div>
             <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Message</label>
-              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
-                class="contact__form-field-input"></textarea>
+              <label for="message" class="contact__form-field-label">Message</label>
+              <textarea id="message" placeholder="Enter Your Message" name="message" cols="30" rows="10"
+                class="contact__form-field-input" required></textarea>
             </div>
             <button type="submit" class="contact__form-submit">Submit</button>
           </form>
@@ -383,24 +377,24 @@
         </ul>
         <div class="main-footer__mid-line"></div>
         <div class="main-footer__socials">
-          <a href="#" class="main-footer__social-link">
+          <a href="#" class="main-footer__social-link" aria-label="GitHub profile">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
-              alt="" class="main-footer__social-link-icon" />
+              alt="GitHub" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
+          <a href="#" class="main-footer__social-link" aria-label="Instagram profile">
+            <img src="./assets/icons8-instagram-48.png" alt="Instagram" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-twitter-50.png" alt="" class="main-footer__social-link-icon" />
+          <a href="#" class="main-footer__social-link" aria-label="Twitter profile">
+            <img src="./assets/icons8-twitter-50.png" alt="Twitter" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
+          <a href="#" class="main-footer__social-link" aria-label="LinkedIn profile">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
-              alt="" class="main-footer__social-link-icon" />
+              alt="LinkedIn" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-pinterest-64.png" alt="" class="main-footer__social-link-icon" />
+          <a href="#" class="main-footer__social-link" aria-label="Pinterest profile">
+            <img src="./assets/icons8-pinterest-64.png" alt="Pinterest" class="main-footer__social-link-icon" />
           </a>
         </div>
       </div>
